@@ -20,17 +20,23 @@ function App() {
             <Music4 className="w-10 h-10 text-purple-600" />
             <h1 className="text-4xl font-bold text-gray-800">歌词本</h1>
           </div>
-          <p className="text-gray-600">
-            <a
-              className="hover:underline underline-offset-4"
-              href="https://github.com/kazoottt"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              KazooTTT
-            </a>
-            的歌词本
-          </p>
+          <a
+            className="hover:underline underline-offset-4 hover:text-purple-600 transition-colors"
+            href="https://github.com/kazoottt"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            KazooTTT
+          </a>
+          <a
+            href="https://github.com/kazoottt/lyricsbook"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center justify-center gap-1 hover:text-purple-600 transition-colors"
+          >
+            <Github className="inline" />
+            <span>LyricsBook</span>
+          </a>
         </header>
 
         <div className="mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -44,17 +50,6 @@ function App() {
           ))}
         </div>
       </div>
-      <footer className="fixed bottom-0 left-0 right-0 text-center py-4 bg-opacity-90 shadow-md w-full z-10">
-        <a
-          href="https://github.com/kazoottt/lyrics-book"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex items-center justify-center gap-1 hover:text-purple-600 transition-colors"
-        >
-          <Github className="inline" />
-          <span>LyricsBook</span>
-        </a>
-      </footer>
     </div>
   );
 }
