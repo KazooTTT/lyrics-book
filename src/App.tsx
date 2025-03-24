@@ -45,9 +45,8 @@ function App() {
         </div>
       </div>
       <footer className="fixed bottom-0 left-0 right-0 text-center py-4 bg-opacity-90 shadow-md w-full z-10">
-        <p className="text-gray-600">2025 KazooTTT. All rights reserved.</p>
         <a
-          href="https://github.com/kazoottt/lyricsbook"
+          href="https://github.com/kazoottt/lyrics-book"
           target="_blank"
           rel="noopener noreferrer"
           className="flex items-center justify-center gap-1 hover:text-purple-600 transition-colors"
