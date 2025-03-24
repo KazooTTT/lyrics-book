@@ -1,23 +1,20 @@
 import { Github, Music4 } from "lucide-react";
 import { useEffect, useState } from "react";
 import { LyricsCard } from "./components/LyricsCard";
+import lyricsText from "./data/lyrics.md?raw";
 import { LyricEntry, parseLyrics } from "./utils/parseLyrics";
 
 function App() {
   const [lyrics, setLyrics] = useState<LyricEntry[]>([]);
 
   useEffect(() => {
-    fetch("/src/data/lyrics.md")
-      .then((response) => response.text())
-      .then((text) => {
-        const parsedLyrics = parseLyrics(text);
-        setLyrics(parsedLyrics);
-      });
+    const parsedLyrics = parseLyrics(lyricsText);
+    setLyrics(parsedLyrics);
   }, []);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 to-pink-50">
-      <div className="container mx-auto px-4 py-8">
+    <div className="relative min-h-screen bg-gradient-to-br from-purple-50 to-pink-50">
+      <div className="container mx-auto px-4 py-8 pb-24">
         <header className="text-center mb-12">
           <div className="flex items-center justify-center gap-3 mb-4">
             <Music4 className="w-10 h-10 text-purple-600" />
@@ -47,12 +44,13 @@ function App() {
           ))}
         </div>
       </div>
-      <footer className="text-center py-4">
+      <footer className="fixed bottom-0 left-0 right-0 text-center py-4 bg-opacity-90 shadow-md w-full z-10">
         <p className="text-gray-600">2025 KazooTTT. All rights reserved.</p>
         <a
           href="https://github.com/kazoottt/lyricsbook"
           target="_blank"
           rel="noopener noreferrer"
+          className="flex items-center justify-center gap-1 hover:text-purple-600 transition-colors"
         >
           <Github className="inline" />
           <span>LyricsBook</span>
