@@ -1,7 +1,7 @@
 import { Github, Music4 } from "lucide-react";
 import { useEffect, useState } from "react";
 import { LyricsCard } from "./components/LyricsCard";
-import lyricsText from "./data/lyrics.md?raw";
+import lyricsText from "./data/歌词本.md?raw";
 import { LyricEntry, parseLyrics } from "./utils/parseLyrics";
 
 function App() {
